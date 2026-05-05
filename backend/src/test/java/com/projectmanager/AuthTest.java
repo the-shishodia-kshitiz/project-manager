@@ -1,0 +1,1 @@
+package com.projectmanager; import org.junit.jupiter.api.Test; import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; public class AuthTest { @Test public void test() { System.out.println("MEMBER HASH: " + new BCryptPasswordEncoder().encode("Member@1234")); } }
