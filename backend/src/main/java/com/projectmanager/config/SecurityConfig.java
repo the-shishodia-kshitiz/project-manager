@@ -55,8 +55,8 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Allow both standard Vite port and fallback port
-        configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:5174"));
+        // Allow standard Vite ports and Vercel domain
+        configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:5174", "https://your-frontend.vercel.app"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
